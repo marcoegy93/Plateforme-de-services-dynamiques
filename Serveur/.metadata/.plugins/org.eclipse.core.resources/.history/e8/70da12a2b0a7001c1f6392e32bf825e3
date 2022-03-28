@@ -1,0 +1,250 @@
+[ INFO] 2022-02-08 09:45:37,291 [] [] FTP server started
+[ INFO] 2022-02-08 09:48:06,351 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a: display name [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]; startup date [Tue Feb 08 09:48:05 CET 2022]; root of context hierarchy
+[ INFO] 2022-02-08 09:48:06,936 [] [] Loading XML bean definitions from file [C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\semaine4\apache-ftpserver-1.1.2\res\conf\ftpd-typical.xml]
+[ INFO] 2022-02-08 09:48:08,082 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]: org.springframework.beans.factory.support.DefaultListableBeanFactory@52af26ee
+[ INFO] 2022-02-08 09:48:08,094 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@52af26ee: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2022-02-08 09:48:08,228 [] [] FTP server started
+[ INFO] 2022-02-08 09:48:29,828 [] [] FTP server started
+[ INFO] 2022-02-08 09:48:50,717 [] [] FTP server started
+[ INFO] 2022-02-08 09:49:12,521 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a: display name [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]; startup date [Tue Feb 08 09:49:12 CET 2022]; root of context hierarchy
+[ INFO] 2022-02-08 09:49:12,561 [] [] Loading XML bean definitions from file [C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\semaine4\apache-ftpserver-1.1.2\res\conf\ftpd-typical.xml]
+[ INFO] 2022-02-08 09:49:12,855 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1a18644
+[ INFO] 2022-02-08 09:49:12,867 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a18644: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2022-02-08 09:49:12,998 [] [] FTP server started
+[ INFO] 2022-02-08 10:03:50,843 [] [] FTP server started
+[ INFO] 2022-02-08 10:04:15,491 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a: display name [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]; startup date [Tue Feb 08 10:04:15 CET 2022]; root of context hierarchy
+[ INFO] 2022-02-08 10:04:15,536 [] [] Loading XML bean definitions from file [C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\semaine4\apache-ftpserver-1.1.2\res\conf\ftpd-typical.xml]
+[ INFO] 2022-02-08 10:04:15,867 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]: org.springframework.beans.factory.support.DefaultListableBeanFactory@614ca7df
+[ INFO] 2022-02-08 10:04:15,880 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@614ca7df: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2022-02-08 10:04:16,034 [] [] FTP server started
+[ INFO] 2022-02-08 10:05:18,606 [] [0:0:0:0:0:0:0:1] CREATED
+[ INFO] 2022-02-08 10:05:18,635 [] [0:0:0:0:0:0:0:1] OPENED
+[ INFO] 2022-02-08 10:05:18,653 [] [0:0:0:0:0:0:0:1] SENT: 220 Service ready for new user.
+
+[ INFO] 2022-02-08 10:05:18,654 [] [0:0:0:0:0:0:0:1] RECEIVED: USER anonymous
+[ INFO] 2022-02-08 10:05:18,656 [anonymous] [0:0:0:0:0:0:0:1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2022-02-08 10:05:18,657 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: PASS *****
+[ INFO] 2022-02-08 10:05:18,662 [anonymous] [0:0:0:0:0:0:0:1] Anonymous login success - User@
+[ INFO] 2022-02-08 10:05:18,662 [anonymous] [0:0:0:0:0:0:0:1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2022-02-08 10:05:18,662 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: TYPE I
+[ INFO] 2022-02-08 10:05:18,663 [anonymous] [0:0:0:0:0:0:0:1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2022-02-08 10:05:18,719 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: EPSV
+[ INFO] 2022-02-08 10:05:18,726 [anonymous] [0:0:0:0:0:0:0:1] SENT: 229 Entering Passive Mode (|||53838|)
+
+[ INFO] 2022-02-08 10:05:18,728 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: SIZE /texte/bonjour.txt
+[ INFO] 2022-02-08 10:05:18,734 [anonymous] [0:0:0:0:0:0:0:1] SENT: 213 19
+
+[ INFO] 2022-02-08 10:05:18,735 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: RETR /texte/bonjour.txt
+[ INFO] 2022-02-08 10:05:18,908 [anonymous] [0:0:0:0:0:0:0:1] File downloaded /texte/bonjour.txt
+[ WARN] 2022-02-08 10:05:18,911 [anonymous] [0:0:0:0:0:0:0:1] Releasing unreserved passive port: 53838
+[ INFO] 2022-02-08 10:05:18,911 [anonymous] [0:0:0:0:0:0:0:1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2022-02-08 10:05:18,911 [anonymous] [0:0:0:0:0:0:0:1] SENT: 226 Transfer complete.
+
+[ WARN] 2022-02-08 10:05:27,515 [anonymous] [0:0:0:0:0:0:0:1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ERROR] 2022-02-08 10:05:27,580 [anonymous] [0:0:0:0:0:0:0:1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ INFO] 2022-02-08 10:05:27,583 [anonymous] [0:0:0:0:0:0:0:1] CLOSED
+[ INFO] 2022-02-08 10:05:35,214 [] [0:0:0:0:0:0:0:1] CREATED
+[ INFO] 2022-02-08 10:05:35,216 [] [0:0:0:0:0:0:0:1] OPENED
+[ INFO] 2022-02-08 10:05:35,218 [] [0:0:0:0:0:0:0:1] SENT: 220 Service ready for new user.
+
+[ INFO] 2022-02-08 10:05:35,223 [] [0:0:0:0:0:0:0:1] RECEIVED: USER anonymous
+[ INFO] 2022-02-08 10:05:35,224 [anonymous] [0:0:0:0:0:0:0:1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2022-02-08 10:05:35,224 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: PASS *****
+[ INFO] 2022-02-08 10:05:35,226 [anonymous] [0:0:0:0:0:0:0:1] Anonymous login success - User@
+[ INFO] 2022-02-08 10:05:35,227 [anonymous] [0:0:0:0:0:0:0:1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2022-02-08 10:05:35,227 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: TYPE I
+[ INFO] 2022-02-08 10:05:35,228 [anonymous] [0:0:0:0:0:0:0:1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2022-02-08 10:05:35,228 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: EPSV
+[ INFO] 2022-02-08 10:05:35,230 [anonymous] [0:0:0:0:0:0:0:1] SENT: 229 Entering Passive Mode (|||53933|)
+
+[ INFO] 2022-02-08 10:05:35,230 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: SIZE /texte/bonjour.txt
+[ INFO] 2022-02-08 10:05:35,232 [anonymous] [0:0:0:0:0:0:0:1] SENT: 213 19
+
+[ INFO] 2022-02-08 10:05:35,232 [anonymous] [0:0:0:0:0:0:0:1] RECEIVED: RETR /texte/bonjour.txt
+[ INFO] 2022-02-08 10:05:35,285 [anonymous] [0:0:0:0:0:0:0:1] File downloaded /texte/bonjour.txt
+[ WARN] 2022-02-08 10:05:35,286 [anonymous] [0:0:0:0:0:0:0:1] Releasing unreserved passive port: 53933
+[ INFO] 2022-02-08 10:05:35,287 [anonymous] [0:0:0:0:0:0:0:1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2022-02-08 10:05:35,287 [anonymous] [0:0:0:0:0:0:0:1] SENT: 226 Transfer complete.
+
+[ INFO] 2022-02-08 10:10:35,443 [anonymous] [0:0:0:0:0:0:0:1] IDLE
+[ INFO] 2022-02-08 10:10:35,443 [anonymous] [0:0:0:0:0:0:0:1] Session idle, closing
+[ INFO] 2022-02-08 10:10:35,447 [anonymous] [0:0:0:0:0:0:0:1] CLOSED
+[ INFO] 2022-02-22 10:03:22,002 [] [] FTP server started
+[ INFO] 2022-02-22 10:05:18,990 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a: display name [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]; startup date [Tue Feb 22 10:05:18 CET 2022]; root of context hierarchy
+[ INFO] 2022-02-22 10:05:19,160 [] [] Loading XML bean definitions from file [C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\projetAdvanced\apache-ftpserver-1.1.2\res\conf\ftpd-typical.xml]
+[ INFO] 2022-02-22 10:05:20,807 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1af2d44a
+[ INFO] 2022-02-22 10:05:20,839 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1af2d44a: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2022-02-22 10:05:22,375 [] [] FTP server started
+[ INFO] 2022-02-22 10:05:48,720 [] [127.0.0.1] CREATED
+[ INFO] 2022-02-22 10:05:48,739 [] [127.0.0.1] OPENED
+[ INFO] 2022-02-22 10:05:48,870 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2022-02-22 10:05:48,874 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2022-02-22 10:05:48,880 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2022-02-22 10:05:48,881 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2022-02-22 10:05:48,894 [anonymous] [127.0.0.1] Anonymous login success - Java17.0.2@
+[ INFO] 2022-02-22 10:05:48,894 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2022-02-22 10:05:48,895 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2022-02-22 10:05:48,898 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2022-02-22 10:05:49,081 [anonymous] [127.0.0.1] RECEIVED: CWD marco
+[ INFO] 2022-02-22 10:05:49,087 [anonymous] [127.0.0.1] SENT: 250 Directory changed to /marco
+
+[ INFO] 2022-02-22 10:05:49,088 [anonymous] [127.0.0.1] RECEIVED: CWD examples
+[ INFO] 2022-02-22 10:05:49,090 [anonymous] [127.0.0.1] SENT: 250 Directory changed to /marco/examples
+
+[ INFO] 2022-02-22 10:05:49,091 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2022-02-22 10:05:49,140 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||55204|)
+
+[ INFO] 2022-02-22 10:05:49,141 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2022-02-22 10:05:49,143 [anonymous] [127.0.0.1] Releasing unreserved passive port: 55204
+[ INFO] 2022-02-22 10:05:49,145 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||55205|)
+
+[ INFO] 2022-02-22 10:05:49,149 [anonymous] [127.0.0.1] RECEIVED: RETR ServiceChat.class
+[ INFO] 2022-02-22 10:05:49,764 [anonymous] [127.0.0.1] File downloaded /marco/examples/ServiceChat.class
+[ WARN] 2022-02-22 10:05:49,767 [anonymous] [127.0.0.1] Releasing unreserved passive port: 55205
+[ INFO] 2022-02-22 10:05:49,767 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2022-02-22 10:05:49,768 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2022-02-22 10:05:49,768 [anonymous] [127.0.0.1] RECEIVED: QUIT
+[ INFO] 2022-02-22 10:05:49,774 [anonymous] [127.0.0.1] SENT: 221 Goodbye.
+
+[ INFO] 2022-02-22 10:05:49,774 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2022-03-02 19:14:03,719 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a: display name [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]; startup date [Wed Mar 02 19:14:03 CET 2022]; root of context hierarchy
+[ INFO] 2022-03-02 19:14:03,847 [] [] Loading XML bean definitions from file [C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\projetAdvanced\apache-ftpserver-1.1.2\res\conf\ftpd-typical.xml]
+[ INFO] 2022-03-02 19:14:05,520 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@4d1b0d2a]: org.springframework.beans.factory.support.DefaultListableBeanFactory@52af26ee
+[ INFO] 2022-03-02 19:14:05,581 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@52af26ee: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2022-03-02 19:14:06,087 [] [] FTP server started
+[ INFO] 2022-03-02 20:32:13,532 [] [127.0.0.1] CREATED
+[ INFO] 2022-03-02 20:32:13,574 [] [127.0.0.1] OPENED
+[ INFO] 2022-03-02 20:32:13,596 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ WARN] 2022-03-02 20:32:25,610 [] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ERROR] 2022-03-02 20:32:25,658 [] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ INFO] 2022-03-02 20:32:25,662 [] [127.0.0.1] CLOSED
+[ INFO] 2022-03-02 20:41:41,818 [] [127.0.0.1] CREATED
+[ INFO] 2022-03-02 20:41:41,821 [] [127.0.0.1] OPENED
+[ INFO] 2022-03-02 20:41:41,824 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ WARN] 2022-03-02 20:41:45,890 [] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ERROR] 2022-03-02 20:41:45,894 [] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:378)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:47)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:519)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$1200(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1223)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.process(AbstractPollingIoProcessor.java:1212)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[ INFO] 2022-03-02 20:41:46,005 [] [127.0.0.1] CLOSED

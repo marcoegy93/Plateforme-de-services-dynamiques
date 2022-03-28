@@ -1,0 +1,43 @@
+package appli;
+
+import bri.*;
+import services.ServiceAma;
+import services.ServiceProg;
+
+public class BRiLaunch {
+	private final static int PORT_PROG = 3000;
+	private final static int PORT_AMA= 4000;
+	
+	public static void main(String[] args) throws Exception {
+		/*
+		@SuppressWarnings("resource")
+		Scanner clavier = new Scanner(System.in);
+		
+		// URLClassLoader sur ftp
+		URL url = new URL("ftp://localhost:2121/classes/");
+		URLClassLoader urlcl = new URLClassLoader(new URL[]{url});
+		*/
+		System.out.println("**** Lancement du Serveur BRi ****");
+		System.out.println("Lancement du serveur Programmeurs sur le port " + PORT_PROG);
+		System.out.println("Lancement du serveur Amateur sur le port " + PORT_AMA);
+
+		new ServeurBRi(PORT_PROG, ServiceProg.class).lancer();
+		new ServeurBRi(PORT_AMA, ServiceAma.class).lancer();
+		/*
+		while (true){
+				try {
+					String classeName = clavier.next();
+					Class<? extends Service> c = urlcl.loadClass(classeName).asSubclass(Service.class);
+					ServiceRegistry.addService(c);
+					// charger la classe et la déclarer au ServiceRegistry
+				} catch (ClassCastException e) {
+					System.out.println("La classe doit implÃ©menter bri.Service");
+				}catch (ValidationException e) {
+					System.out.println(e.getMessage());
+				} catch (ClassNotFoundException e) {
+					System.out.println("La classe n'est pas sur le serveur ftp dans home"); 
+				}
+			}
+		 */
+	}
+}

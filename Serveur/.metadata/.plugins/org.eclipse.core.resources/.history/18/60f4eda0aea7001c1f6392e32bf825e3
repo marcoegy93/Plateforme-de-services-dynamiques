@@ -1,0 +1,71 @@
+package bri;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
+import java.util.List;
+import java.util.Vector;
+
+public class ServiceRegistry {
+	// cette classe est un registre de services
+	// partagée en concurrence par les clients et les "ajouteurs" de services,
+	// un Vector pour cette gestion est pratique
+
+	static {
+		servicesClasses = new Vector<ClasseApparente>();
+	}
+	private static List<ClasseApparente> servicesClasses;
+
+// ajoute une classe de service après contrôle de la norme BLTi
+	public static void addService(Class<? extends Service> classe) throws ValidationException {
+		// vérifier la conformité par introspection
+		// si non conforme --> exception avec message clair
+		// si conforme, ajout au vector
+		validation(classe);
+		servicesClasses.add(classe);
+	}
+	
+	// une méthode de validation renvoie void et lève une exception si non validation
+		// surtout pas de retour boolean !
+		private static void validation(Class<? extends Service> classe) throws ValidationException {
+			// cette partie pourrait être déléguée à un objet spécialisé
+			// le constructeur avec Socket
+			boolean extendsService = false;
+			Constructor<? extends Service> c = null;
+			try { 
+				c = classe.getConstructor(java.net.Socket.class); 
+			} catch (NoSuchMethodException e) {
+				// transformation du type de l'exception quand l'erreur est détectée par ce biais
+				throw new ValidationException("Il faut un constructeur avec Socket");
+			}
+			int modifiers = c.getModifiers();
+			if (!Modifier.isPublic(modifiers)) 
+				throw new ValidationException("Le constructeur (Socket) doit être public");
+			if (c.getExceptionTypes().length != 0)
+				throw new ValidationException("Le constructeur (Socket) ne doit pas lever d'exception");
+		}
+
+	// supprime le service d'index (choix-1) du vecteur
+	public static void supprimerService(int choix) {
+		servicesClasses.remove(choix-1);
+	}
+
+	// supprime le service d'index (choix-1) du vecteur
+	public static void majService(int choix, Class<? extends Service> c) throws ValidationException {
+		validation(c);
+		servicesClasses.set(choix - 1, c);
+	}
+		
+	// renvoie la classe de service (numService -1)	
+	public static ClasseApparente getServiceClass(int numService) {
+		return servicesClasses.get(numService-1);
+	}
+	
+	// liste les activités présentes
+	public static String toStringue() {
+		String result = "Activités présentes :##";
+		for(int i = 0; i < servicesClasses.size(); i++)
+			result += (i+1 + " : " + servicesClasses.get(i).getSimpleName() + "##");
+		return result;
+	}
+
+}

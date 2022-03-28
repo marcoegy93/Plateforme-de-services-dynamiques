@@ -1,0 +1,30 @@
+package bri;
+
+public class ClasseDemarree {
+	private Class<? extends Service> maclasse;
+	private boolean apparent;
+	
+	
+	public ClasseDemarree(Class<? extends Service> maclasse, boolean apparent) {
+		this.maclasse = maclasse;
+		this.apparent = apparent;
+	}
+
+
+	public Class<? extends Service> getMaclasse() {
+		return maclasse;
+	}
+
+
+	public boolean isApparent() {
+		return apparent;
+	}
+
+
+	public void setApparent(boolean apparent) {
+		this.apparent = apparent;
+	}
+	
+	
+	
+}

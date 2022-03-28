@@ -1,0 +1,189 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Vector;
+
+import bri.Service;
+import utilisateurs.User;
+
+
+public class ServiceChat implements Service {
+    //private static Map<String, PrintWriter> utilisateurs;
+    private static List<User> utilisateurs;
+    //private static List<Message> messages;
+    private static Map<String,List<String>>  messages;
+    private Socket client;
+    //private String pseudo;
+
+    static {
+        utilisateurs = new Vector<>();
+        messages = new HashMap<String,List<String>>();
+    }
+
+    public ServiceChat(Socket client) {
+        this.client = client;
+    }
+
+    @Override
+    public void run() {
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+            boolean connected = false;
+			User utilisateurConnect = null;
+			while(!connected) {
+				out.println("Bonjour ! Avez-vous un compte ? (o/n)");
+				switch (in.readLine()) {
+					case "o":
+						out.println("Connectez-vous comme-ci : 'LOGIN-MDP'");
+						try {
+							utilisateurConnect = authentification(in.readLine());
+							connected=true;
+						} catch (Exception e) {
+							e.printStackTrace();
+							connected = false;
+						}
+						break;
+					case "n":
+						connected=true;
+						out.println("Inscrivez-vous comme-ci : 'LOGIN-MDP'");
+						utilisateurConnect = inscription(in.readLine());
+						connected=true;
+						break;
+					default:
+						continue;
+				}
+			}
+			out.println("Voulez-vous envoyer un message ou lire vos messages  reçus ? E pour envoyer, L pour lire, Q pour quitter");
+			while(true) {
+				
+	            String reponse = in.readLine();
+	            switch(reponse) {
+	            	case "E":
+	            		out.println("SERVICE CHAT##Rentrez donc le pseudo du destinataire ?");
+	            		String pseudo = in.readLine();
+	            		out.println("Quel message voulez-vous envoyer ?");
+	            		String message = in.readLine();
+	            		envoieMessage(pseudo, message);
+	            		out.println("Message envoyé !##Voulez-vous envoyer un message ou lire vos messages  reçus ? E pour envoyer, L pour lire, Q pour quitter");
+	            		break;
+	            		//messages.put(pseudo, null);
+	            		//messages.add(new Message(message,pseudo));
+	            	case "L":
+						String s = lectureMessages(utilisateurConnect);
+		            	out.println(s+ "Voulez-vous envoyer un message ou lire vos messages  reçus ? E pour envoyer, L pour lire, Q pour quitter" );
+		            	break;
+	            	case "Q":
+	            		this.client.close();
+	            		break;
+	            	default:
+	            		System.out.println("Veuillez ressaisir le bon caractère ");
+	            		
+	            }
+			}
+			
+            
+            
+            //this.pseudo = in.readLine();
+//            synchronized (utilisateurs) {
+//                utilisateurs.put(this.pseudo, out);
+//            }
+//
+//            while(true) {
+//                String tmp = in.readLine();
+//                if(tmp == "") {
+//                    client.close();
+//                    break;
+//                }
+//                broadcast(tmp);
+//            }
+        } catch (IOException e) {}
+    }
+
+	private String lectureMessages(User utilisateurConnect) {
+		synchronized(messages) {
+			String s = "Voici la liste de vos messages reçus :##";
+			for (Map.Entry mapentry : messages.entrySet()){
+				if(mapentry.getKey().toString().equals(utilisateurConnect.getLogin())) {
+					for(int i=0;i<messages.get(utilisateurConnect.getLogin()).size();i++) {
+						s+= "message " + (i+1) + " : " + messages.get(utilisateurConnect.getLogin()).get(i) + "##";
+					}
+				}
+			}
+			return s;
+		}
+	}
+
+	private void envoieMessage(String pseudo, String message) {
+		synchronized(messages) {
+			if(!messages.containsKey(pseudo)) {
+				messages.put(pseudo, new ArrayList<String>(Arrays.asList(message)));
+				//System.out.println(messages.get(pseudo));
+			}else {
+				messages.get(pseudo).add(message);
+			}
+		}
+	}
+
+//    private void lectureMessage() {
+//		// TODO Auto-generated method stub
+//		
+//	}
+
+//	private void envoieMessage() {
+//		// TODO Auto-generated method stub
+//		
+//	}
+	
+		private User inscription(String readLine){
+		String[] lgmdp = readLine.split("-");
+		assert(lgmdp.length == 2);
+
+		User tmp = new User(lgmdp[0],lgmdp[1]);
+		synchronized (utilisateurs) {
+			utilisateurs.add(tmp);
+		}
+		return tmp;
+	}
+
+	private User authentification(String co) throws Exception {
+		String[] lgmdp = co.split("-");
+		assert(lgmdp.length == 2);
+
+		User s = null;
+		synchronized (utilisateurs) {
+			for (User tmp : utilisateurs) {
+				if(tmp.getLogin().equals(lgmdp[0]) && tmp.connect(lgmdp[1]))
+					s = tmp;
+			}
+		}
+		if(s == null)
+			throw new Exception("Mot de passe / Login incorrect");
+		return s;
+	}
+
+
+//	private synchronized void broadcast(String readLine) {
+//        for(String p : utilisateurs.keySet())
+//            utilisateurs.get(p).println(this.pseudo + " : " + readLine);
+//    }
+
+    protected void finalize() throws Throwable {
+        synchronized (utilisateurs) {
+            utilisateurs.remove(client);
+        }
+        client.close();
+    }
+}
+

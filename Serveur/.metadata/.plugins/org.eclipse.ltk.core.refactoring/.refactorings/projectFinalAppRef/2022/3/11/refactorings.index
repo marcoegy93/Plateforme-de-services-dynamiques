@@ -1,0 +1,12 @@
+1647712348011	Rename method 'chargerService'
+1647712991785	Rename type 'ClasseApparente'
+1647713015210	Rename field 'apparent'
+1647713026858	Rename local variable 'apparent'
+1647713041125	Rename method 'isApparent'
+1647713052477	Rename method 'setApparent'
+1647713060823	Rename local variable 'apparent'
+1647713761724	Delete element
+1647713804222	Delete element
+1647714241730	Rename method 'ajoutService'
+1647787844075	Extract method 'auth'
+1647794613172	Copy compilation unit

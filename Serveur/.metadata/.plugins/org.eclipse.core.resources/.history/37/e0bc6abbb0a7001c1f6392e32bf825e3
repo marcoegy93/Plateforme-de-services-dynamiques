@@ -1,0 +1,28 @@
+ackage examples;
+
+import bri.Service;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class ServiceAnalyseXML implements Service {
+    private Socket client;
+
+    public ServiceAnalyseXML(Socket c) {
+        this.client = c;
+    }
+
+    @Override
+    public void run() {
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+            out.println("Saississez l'url ftp où votre fichier XML est localisé ");
+
+        } catch (IOException e) {
+        }
+    }
+}

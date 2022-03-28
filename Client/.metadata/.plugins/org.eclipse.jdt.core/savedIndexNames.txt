@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Marco_B\Desktop\Documents\2eme annee\periode C\app ref\semaine4_client\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+760091825.index
+137624701.index
